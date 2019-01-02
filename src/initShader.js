@@ -11,5 +11,5 @@ export default function (gl, vShaderText, fShaderText) {
   gl.attachShader(shaderProgram, vertShader);
   gl.attachShader(shaderProgram, fragShader);
   gl.linkProgram(shaderProgram);
-  return shaderProgram
+  gl.program = shaderProgram
 }
