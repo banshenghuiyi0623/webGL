@@ -1,8 +1,7 @@
 attribute vec4 a_Position;
-attribute float a_PointSize;
+uniform mat4 u_xformMatrix;
+uniform mat4 u_xformMatrix2;
 void main() {
   //设置坐标
-  gl_Position = a_Position;
-  //设置尺寸
-  gl_PointSize = a_PointSize;
+  gl_Position = u_xformMatrix * u_xformMatrix2 * a_Position;
 }
